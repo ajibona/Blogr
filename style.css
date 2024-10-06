@@ -65,9 +65,9 @@ body{
 
 button{
   border: none;
-  padding: 10px 20px;
-  border-radius: 30px;
-  font-size: .95rem;
+  padding: 15px 20px;
+  border-radius: 28px;
+  font-size: 1rem;
   font-family: var(--fonts-family-overpas);
   font-weight: var(--fw-font-weight-overpass-bold-600);
   cursor: pointer;
@@ -86,7 +86,7 @@ header{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-block: 40px;
+  padding-block: 60px;
 }
 
 .mobile-menu-navigation-list{
@@ -95,7 +95,6 @@ header{
   padding-block: 2rem;
   top: 110px;
   border-radius: 5px;
-  /* opacity: 0; */
   box-shadow: 1px 10px 40px rgba(0, 0, 0, 0.4);
   padding-inline: 1.5rem;
   opacity: 0;
@@ -107,6 +106,7 @@ header{
   opacity: 1;
   visibility: visible;
 }
+
 .navigation-list-item{
   margin-bottom: 20px;
   padding-bottom: 20px;
@@ -171,12 +171,15 @@ header{
 
 .background-container{
   width: 100%;
-  height: 500px;
-  background-color: var(--cc-background-light-red);
+  height: 600px;
+  background-image: url('images/bg-pattern-intro-mobile.svg'), linear-gradient(to bottom, hsl(13, 100%, 72%),  hsl(353, 100%, 62%));
   position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
   inset: 0;
   z-index: -1;
-  border-bottom-left-radius: 110px;
+  border-bottom-left-radius: 100px;
 }
 
 .background-container::before{
@@ -191,7 +194,7 @@ header{
 
 .main-hero{
   padding-block-start: 30px;
-  margin-bottom: 220px;
+  margin-bottom: 270px;
 }
 
 .main-hero h1{
@@ -199,7 +202,6 @@ header{
   color: var(--cc-neutral-White-text);
   font-size: 2.2rem;
   font-weight: var(--fw-font-weight-overpass-bold-600);
-  max-width: 320px;
   line-height: 1.3;
   margin-inline: auto;
   margin-bottom: 15px;
@@ -208,12 +210,12 @@ header{
 .main-hero p{
   text-align: center;
   font-family: var(--fonts-family-overpas);
-  font-size: 1.1rem;
+  font-size: 1.155rem;
   color: var(--cc-neutral-White-text);
   font-weight: var(--fw-font-weight-ubuntu-regular-400);
-  max-width: 280px;
   margin-inline: auto;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
+  line-height: 1.5;
 }
 
 .btn-select{
@@ -238,11 +240,12 @@ header{
   background-color: transparent;
   border: 1px solid var(--cc-neutral-White-text);
   color: var(--cc-neutral-White-text);
-  transition: all .3s ease-in;
+  transition: all .2s ease-in;
 }
 
 .learn-btn:hover{
   background-color: var(--cc-neutral-White-text);
+  color: var(--cc-background-very-light-red);
 }
 
 .future-design{
@@ -252,7 +255,8 @@ header{
 .future-design h1{
   font-size: 1.7rem;
   text-align: center;
-  font-weight: var(--fw-font-weight-overpass-bold-600);
+  font-weight: var
+  (--fw-font-weight-overpass-bold-600);
 }
 
 .design-image{
@@ -263,10 +267,10 @@ header{
   display: grid;
   row-gap: 3rem;
 }
+
 .design-text-layout h2{
   text-align: center;
   font-size: 1.8rem;
-  max-width: 320px;
   margin-bottom: 20px;
   font-weight: var(--fw-font-weight-overpass-bold-600);
 }
