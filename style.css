@@ -1,0 +1,382 @@
+:root{
+  
+  /* Primary color*/
+  --cc-primary-light-red-cta-text: hsl(356, 100%, 66%);
+  --cc-primary-very-light-red-cta-hover-background: hsl(355, 100%, 74%);
+  --cc-primary-very-dark-blue-headings: hsl(208, 49%, 24%);
+
+   /* Neutral color*/
+  --cc-neutral-White-text: hsl(0, 0%, 100%);
+  --cc-neutral-Grayish-blue-footer-text: hsl(240, 2%, 79%);
+  --cc-neutral-very-dark-grayish-blue-body-copy: hsl(207, 13%, 34%);
+  --cc-neutral-very-dark-black-blue-footer-background: hsl(240, 10%, 16%);
+
+  /* Background gradient - Intro/CTA mobile nav: */
+  --cc-background-very-light-red: hsl(13, 100%, 72%);
+  --cc-background-light-red: hsl(353, 100%, 62%);
+
+  /* Background gradient - body: */
+  --cc-background-very-dark-gray-blue: hsl(237, 17%, 21%);
+  --cc-background-very-dark-desaturated-blue: hsl(237, 23%, 32%);
+
+  /* Fonts */
+  --ff-font-size: 16px;
+  --fonts-family-overpas: "Overpass", sans-serif;
+  --fonts-family-ubuntu: "Ubuntu", sans-serif;
+
+  --fw-font-weight-overpass-regular-300: 300;
+  --fw-font-weight-overpass-bold-600: 600;
+
+  --fw-font-weight-ubuntu-regular-400: 400;
+  --fw-font-weight-ubuntu-bold-500: 500;
+  --fw-font-weight-ubuntu-extra-bold-700: 700;
+}
+
+*,
+::before,
+::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  cursor: pointer;
+}
+
+h1, h2, h3{
+  color: var(--cc-primary-very-dark-blue-headings);
+  font-family: var(--fonts-family-overpas);
+}
+
+body{
+  font-size: var(--ff-font-size);
+}
+
+button{
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: .95rem;
+  font-family: var(--fonts-family-overpas);
+  font-weight: var(--fw-font-weight-overpass-bold-600);
+  cursor: pointer;
+}
+
+.minimum-size-width{
+  width: min(100% - 40px, 60rem);
+  margin-inline: auto;
+}
+
+header{
+  position: relative;
+}
+
+.header-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 40px;
+}
+
+.mobile-menu-navigation-list{
+  position: absolute;
+  background-color: var(--cc-neutral-White-text);
+  padding-block: 2rem;
+  top: 110px;
+  border-radius: 5px;
+  /* opacity: 0; */
+  box-shadow: 1px 10px 40px rgba(0, 0, 0, 0.4);
+  padding-inline: 1.5rem;
+  opacity: 0;
+  transition: all .3s ease-in-out;
+}
+
+.active-mobile-menu-list{
+  opacity: 1;
+}
+.navigation-list-item{
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(182, 182, 182);
+}
+
+.navigation-list-item nav ul{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.navigation-list-item nav ul li a{
+  font-family: var(--fonts-family-overpas);
+  font-size: 1.2rem;
+  color: var(--cc-primary-very-dark-blue-headings);
+  transition: color .1s ease-in-out;
+  text-align: center;
+}
+
+.mobile-active-list-element{
+  background-color: black;
+  min-width: 100%;
+}
+.navigation-list-item nav ul li a:hover{
+  color: var(--cc-primary-very-light-red-cta-hover-background);
+}
+
+.mobile-menu-login{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.mobile-login-btn{
+  background-color: transparent;
+  font-size: 1.1rem;
+  color: var(--cc-primary-very-dark-blue-headings);
+  cursor: pointer;
+  transition: all .1s ease-in-out;
+}
+
+.mobile-login-btn:hover{
+  color: var(--cc-primary-very-light-red-cta-hover-background);
+}
+
+.mobile-sign-up-bta{
+  padding: 10px 40px;
+  font-size: 1.1rem;
+  background-image:linear-gradient(to right, hsl(13, 100%, 72%),  hsl(353, 100%, 62%));
+  color: var(--cc-neutral-White-text);
+  cursor: pointer;
+  transition: opacity .1s ease-in;
+}
+
+.mobile-sign-up-bta:hover{
+  opacity: 0.7;
+}
+
+.background-container{
+  width: 100%;
+  height: 500px;
+  background-color: var(--cc-background-light-red);
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-bottom-left-radius: 110px;
+}
+
+.background-container::before{
+  /* content: url("../blogr-landing-page-main/images/bg-pattern-intro-mobile.svg"); */
+
+  background: url(/blogr-landing-page-main/images/bg-pattern-intro-mobile.svg);
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.main-hero{
+  padding-block-start: 30px;
+  margin-bottom: 220px;
+}
+
+.main-hero h1{
+  text-align: center;
+  color: var(--cc-neutral-White-text);
+  font-size: 2.2rem;
+  font-weight: var(--fw-font-weight-overpass-bold-600);
+  max-width: 320px;
+  line-height: 1.3;
+  margin-inline: auto;
+  margin-bottom: 15px;
+}
+
+.main-hero p{
+  text-align: center;
+  font-family: var(--fonts-family-overpas);
+  font-size: 1.1rem;
+  color: var(--cc-neutral-White-text);
+  font-weight: var(--fw-font-weight-ubuntu-regular-400);
+  max-width: 280px;
+  margin-inline: auto;
+  margin-bottom: 40px;
+}
+
+.btn-select{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.start-btn{
+  background-color: var(--cc-neutral-White-text);
+  color: var(--cc-primary-light-red-cta-text);
+  transition: opacity .2s ease-in;
+  cursor: pointer;
+}
+
+.start-btn:hover{
+  opacity: 0.7;
+}
+
+.learn-btn{
+  background-color: transparent;
+  border: 1px solid var(--cc-neutral-White-text);
+  color: var(--cc-neutral-White-text);
+  transition: all .3s ease-in;
+}
+
+.learn-btn:hover{
+  background-color: var(--cc-neutral-White-text);
+}
+
+.future-design{
+  margin-bottom: 290px;
+}
+
+.future-design h1{
+  font-size: 1.7rem;
+  text-align: center;
+  font-weight: var(--fw-font-weight-overpass-bold-600);
+}
+
+.design-image{
+  margin-block: 40px;
+}
+
+.design-text{
+  display: grid;
+  row-gap: 3rem;
+}
+.design-text-layout h2{
+  text-align: center;
+  font-size: 1.8rem;
+  max-width: 320px;
+  margin-bottom: 20px;
+  font-weight: var(--fw-font-weight-overpass-bold-600);
+}
+
+.design-text-layout p{
+  text-align: center;
+  font-family: var(--fonts-family-ubuntu);
+  font-size: 1.1rem;
+  color: var(--cc-neutral-very-dark-grayish-blue-body-copy);
+  font-weight: var(--fw-font-weight-ubuntu-regular-400);
+  line-height: 1.7;
+}
+
+.state-of-the-art-section{
+  background-color: var(--cc-background-very-dark-desaturated-blue);
+  position: relative;
+  border-bottom-left-radius: 100px;
+  border-top-right-radius: 100px;
+  margin-bottom: 100px;
+}
+
+.state-of-art-mobile-image img{
+  position: absolute;
+  transform: translateY(-50%);
+}
+
+.state-of-art-text h1{
+  padding-top: 250px;
+  color: var(--cc-neutral-White-text);
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: var(--fw-font-weight-overpass-bold-600);
+  margin-bottom: 15px;
+}
+
+.state-of-art-text p{
+  font-family: var(--fonts-family-ubuntu);
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  padding-inline: 15px;
+  color: var(--cc-neutral-White-text);
+  font-weight: var(--fw-font-weight-ubuntu-regular-400);
+  padding-bottom: 120px;
+}
+
+.open-source{
+  margin-bottom: 100px;
+}
+
+.open-source-image{
+  margin-bottom: 50px;
+}
+
+.open-source-text{
+  display: grid;
+  row-gap: 2.8rem;
+}
+
+.open-source-text-layout h3{
+  text-align: center;
+  font-size: 1.7rem;
+  margin-bottom: 20px;
+}
+
+.open-source-text-layout p{
+  font-family: var(--fonts-family-ubuntu);
+  text-align: center;font-size: 1rem;
+  line-height: 1.8;
+  color: var(--cc-neutral-very-dark-grayish-blue-body-copy);
+  font-weight: var(--fw-font-weight-ubuntu-regular-400);
+}
+
+footer{
+  background-color: var(--cc-neutral-very-dark-black-blue-footer-background);
+  border-top-right-radius: 100px;
+  padding-block: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo{
+  margin-bottom: 50px;
+}
+
+.footer-links-container{
+  display: grid;
+  row-gap: 3rem;
+}
+
+.footer-product-links p{
+  font-family: var(--fonts-family-overpas);
+  color: var(--cc-neutral-White-text);
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: var(--fw-font-weight-overpass-bold-600);
+}
+
+.footer-product-links nav ul{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-product-links nav ul li a{
+  text-align: center;
+  font-family: var(--fonts-family-ubuntu);
+  color: var(--cc-neutral-Grayish-blue-footer-text);
+  font-size: 1.1rem;
+  
+}
