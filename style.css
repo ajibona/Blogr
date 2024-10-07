@@ -3,7 +3,7 @@
   /* Primary color*/
   --cc-primary-light-red-cta-text: hsl(356, 100%, 66%);
   --cc-primary-very-light-red-cta-hover-background: hsl(355, 100%, 74%);
-  --cc-primary-very-dark-blue-headings: hsl(208, 49%, 24%);
+  --cc-primary-very-dark-blue-headings: #1f3f5b;
 
    /* Neutral color*/
   --cc-neutral-White-text: hsl(0, 0%, 100%);
@@ -16,7 +16,7 @@
   --cc-background-light-red: hsl(353, 100%, 62%);
 
   /* Background gradient - body: */
-  --cc-background-very-dark-gray-blue: hsl(237, 17%, 21%);
+  --cc-background-very-dark-gray-blue: #2c2d3f;
   --cc-background-very-dark-desaturated-blue: hsl(237, 23%, 32%);
 
   /* Fonts */
@@ -253,7 +253,7 @@ header{
 }
 
 .future-design h1{
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   text-align: center;
   font-weight: var
   (--fw-font-weight-overpass-bold-600);
@@ -265,7 +265,7 @@ header{
 
 .design-text{
   display: grid;
-  row-gap: 3rem;
+  row-gap: 4rem;
 }
 
 .design-text-layout h2{
@@ -285,11 +285,12 @@ header{
 }
 
 .state-of-the-art-section{
-  background-color: var(--cc-background-very-dark-desaturated-blue);
+  background-color: var(--cc-background-very-dark-gray-blue);
   position: relative;
   border-bottom-left-radius: 100px;
   border-top-right-radius: 100px;
   margin-bottom: 100px;
+  isolation: isolate;
 }
 
 .state-of-art-mobile-image img{
@@ -297,8 +298,15 @@ header{
   transform: translateY(-50%);
 }
 
+.background-image-prac{
+  position: absolute;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+}
+
 .state-of-art-text h1{
-  padding-top: 250px;
+  padding-top: 300px;
   color: var(--cc-neutral-White-text);
   text-align: center;
   font-size: 2.4rem;
@@ -334,11 +342,12 @@ header{
   text-align: center;
   font-size: 1.7rem;
   margin-bottom: 20px;
+  font-weight: var(--fw-font-weight-overpass-bold-600);
 }
 
 .open-source-text-layout p{
   font-family: var(--fonts-family-ubuntu);
-  text-align: center;font-size: 1rem;
+  text-align: center;font-size: 1.1rem;
   line-height: 1.8;
   color: var(--cc-neutral-very-dark-grayish-blue-body-copy);
   font-weight: var(--fw-font-weight-ubuntu-regular-400);
@@ -354,7 +363,7 @@ footer{
 }
 
 .footer-logo{
-  margin-bottom: 50px;
+  margin-bottom: 70px;
 }
 
 .footer-links-container{
@@ -365,7 +374,7 @@ footer{
 .footer-product-links p{
   font-family: var(--fonts-family-overpas);
   color: var(--cc-neutral-White-text);
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   margin-bottom: 25px;
   text-align: center;
   font-weight: var(--fw-font-weight-overpass-bold-600);
@@ -384,5 +393,4 @@ footer{
   font-family: var(--fonts-family-ubuntu);
   color: var(--cc-neutral-Grayish-blue-footer-text);
   font-size: 1.1rem;
-  
 }
