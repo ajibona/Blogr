@@ -40,10 +40,14 @@
   box-sizing: border-box;
 }
 
-img{
+.image-max-width-settings{
   max-width: 100%;
   height: auto;
-}
+} 
+
+/* main{
+  overflow-x: clip;
+} */
 
 li{
   list-style: none;
@@ -61,6 +65,7 @@ h1, h2, h3{
 
 body{
   font-size: var(--ff-font-size);
+  overflow-x: clip;
 }
 
 button{
@@ -182,6 +187,12 @@ header{
   border-bottom-left-radius: 100px;
 }
 
+@media (width >= 68.75rem){
+  .background-container{
+    background-image: url('images/bg-pattern-intro-desktop.svg'), linear-gradient(to bottom, hsl(13, 100%, 72%),  hsl(353, 100%, 62%));
+  }
+}
+
 .background-container::before{
   /* content: url("../blogr-landing-page-main/images/bg-pattern-intro-mobile.svg"); */
 
@@ -259,6 +270,7 @@ header{
   (--fw-font-weight-overpass-bold-600);
 }
 
+
 .design-image{
   margin-block: 40px;
 }
@@ -283,6 +295,53 @@ header{
   font-weight: var(--fw-font-weight-ubuntu-regular-400);
   line-height: 1.7;
 }
+
+@media (width >= 37.5rem){
+  .design-image{
+    display: flex;
+    justify-content: center;
+    margin-inline: auto;
+  }
+}
+
+@media (width >= 68.75rem){
+
+  .future-design{
+    margin-block: 380px; 
+    overflow-x: hidden;
+  }
+
+  .future-design h1{
+    margin-bottom: 100px;
+    font-size: 2.5rem;
+  }
+
+  .design-container{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;  
+  }
+
+  .design-image{
+    margin-bottom: 0;
+    position: absolute;
+    right: -300px;
+    overflow-x: clip;
+  }
+  .design-text{
+    margin-left: 100px;
+  }
+  .design-text-layout h2{
+    text-align: left;
+  }
+
+  .design-text-layout p{
+    text-align: left;
+    font-size: .9rem;
+    max-width: 500px;
+  }
+}
+
 
 .state-of-the-art-section{
   background-color: var(--cc-background-very-dark-gray-blue);
@@ -325,6 +384,45 @@ header{
   padding-bottom: 120px;
 }
 
+@media (width >= 37.5rem){
+  .state-of-art-mobile-image img{
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (width >= 68.75rem){
+  .state-of-art-mobile-image img{
+    transform: translateY(-50%);
+    top: 50%;
+    left: 0;
+  }
+
+  .state-of-art-text{
+    outline: 1px solid #fff;
+    padding-block: 10rem;
+    padding-inline-start: 600px;
+  }
+
+  .state-of-art-container{
+    display: flex;
+    justify-content: flex-end;
+  }
+  .state-of-art-text h1{
+    padding: 0;
+    text-align: left;
+  }
+
+  .state-of-art-text p{
+    padding-bottom: 0;
+    text-align: left;
+    font-size: .9rem;
+    min-width: 500px;
+    padding-inline: 0;
+  }
+}
+
 .open-source{
   margin-bottom: 100px;
 }
@@ -353,6 +451,58 @@ header{
   font-weight: var(--fw-font-weight-ubuntu-regular-400);
 }
 
+@media (width >= 37.5rem){
+  .open-source-image{
+    display: flex;
+    justify-content: center;
+    margin-inline: auto;
+  }
+}
+
+@media (width >= 68.75rem){
+
+  .background-image-prac{
+    display: none;
+  }
+
+  .open-source{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    position: relative;
+    margin-block: 280px;    
+  }
+
+  .open-source-text{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    margin-left: 500px;
+  }
+
+  .open-source-image img{
+    position: absolute;
+    top: -210px;
+    left: -300px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .open-source-text-layout h3{
+    font-size: 1.5rem;
+    text-align: left;
+    margin-top: 0;
+  }
+
+  .open-source-text-layout p{
+    text-align: left;
+    font-size: 1rem;
+    max-width: 550px;
+  }
+}
+
 footer{
   background-color: var(--cc-neutral-very-dark-black-blue-footer-background);
   border-top-right-radius: 100px;
@@ -368,6 +518,7 @@ footer{
 
 .footer-links-container{
   display: grid;
+  grid-template-rows: 1fr;
   row-gap: 3rem;
 }
 
@@ -393,4 +544,40 @@ footer{
   font-family: var(--fonts-family-ubuntu);
   color: var(--cc-neutral-Grayish-blue-footer-text);
   font-size: 1.1rem;
+}
+
+@media (width >= 68.75rem){
+  footer{
+    justify-content: center;
+  }
+
+  .footer-logo{
+    margin-bottom: 0;
+  }
+
+  .footer-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 14rem;
+  }
+
+  .footer-links-container{
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 12rem;
+    row-gap: 0;
+  }
+
+  .footer-product-links p{
+    text-align: left;
+  }
+
+  .footer-product-links nav ul{
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .footer-product-links nav ul li a{
+    text-align: left;
+    font-size: .9rem;
+  }
 }
